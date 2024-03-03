@@ -1,8 +1,545 @@
-/* Global */
-* {
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
     margin: 0;
     padding: 0;
-  
+    font-family: "Mulish",sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --main-color:rgb(255, 84, 0);
+    --text-color:rgb(255, 255, 255);
+    --p-color:rgba(19, 19, 24, 0.7);
 }
 
+
 /* Header */
+.header-section{
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    
+}
+.nav-container{
+    display: flex;
+    align-items: center;
+   /* position: absolute;*/
+    min-height: 20px;
+    /*border: 2px solid royalblue;*/
+    width: 50%;
+}
+p{
+    color:black;
+    font: Mulish;
+    font-weight: 800;
+    font-size: 36px;
+    margin-left:5px;
+    
+    }
+.special{
+    font: Mulish;
+    color: rgb(255, 84, 0);
+    font-weight: 800;
+}
+
+.nav-container img{
+   
+    width: 48px;
+    height: 56.01px;
+   
+}
+.item-container{
+    
+  width: 50%;
+ /* border: 2px solid red;*/
+  display: flex;
+  justify-content: space-between;
+ 
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 0px 10px 0px;
+}
+.item-container a{
+    text-decoration: none;
+    color: rgb(66, 66, 71);
+font-family: Mulish;
+font-size: 18px;
+font-weight: 700;
+line-height: 23px;
+letter-spacing: 0%;
+text-align: center;
+position: relative;
+width: 506px;
+height: 43px;
+   
+}
+#home{
+    color:rgb(255, 84, 0);
+}
+
+/* banner styles*/
+.banner-section {
+    width: 80%;
+    margin: auto;
+    height: 600px;
+    background-image: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url(../images/1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    margin-top: 20px;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-section-heading {
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 35px;
+}
+
+.banner-section-paragraph {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 70px;
+    width: 70%;
+    color: white;
+}
+
+.banner-section-form {
+    display: inline-flex;
+    padding: 16px;
+    align-items: flex-start;
+    gap: 24px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.30);
+}
+
+.banner-section-form>input,
+select,
+button {
+    width: 174px;
+    height: 60px;
+    font-size: 20px;
+    padding: 15px;
+    color: rgba(19, 19, 24, 0.50);
+    border-radius: 8px;
+    border: none;
+}
+
+.banner-section-form>button {
+    background: #FF5400;
+    color: white;
+
+}
+/* popular tour styles */ 
+
+.popular{
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.context{
+    width: 60%;
+}
+.context h1{
+    font-size: 40px;
+    font-weight: 800;
+}
+.context p,.context li{
+    padding-top : 30px ;
+    color: var(--p-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+.context .btn1{
+    color: var(--text-color);
+    font-weight: 700;
+    background: var(--main-color);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.img-mout{
+    text-align: end;
+    width: 50%;
+}
+.img-mout img{
+    width: 100%;
+    
+}
+
+/* grid section */
+.location , .choose{
+    padding: 40px 10%;
+    text-align: center;
+}
+.location h1, .choose h1,.deals h1{
+    font-size: 40px;
+    font-weight: 800;
+}
+.location p, .deals p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--p-color);
+    padding: 20px 10%;
+}
+.gridd .flex1{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 50% auto;
+    gap: 15px;
+    color: var(--text-color);
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    
+}
+
+.flex1 .maldiv{
+    background: url("../images/mal.png");
+    padding-top: 145px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    height:300px;
+    transition: all ease-in-out .6s;
+    
+}
+.flex1 .maldiv:hover{
+    transform: scale(1.06);
+}
+.flex1 .indo{
+    background: url("../images/ind.png");
+    padding-top: 145px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    height: 300px;
+    transition: all ease-in-out .6s;
+}
+.flex1 .indo:hover{
+    transform: scale(1.06);
+}
+.gridd .flex2{
+
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    display: grid;
+    gap: 15px;
+    margin-top: 15px;
+    color: var(--text-color);
+    grid-template-columns: 300px auto 230px;
+}
+.flex2 .srilaka{
+    background: url("../images/sri.png");
+    padding-top: 145px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    height:300px;
+    transition: all ease-in-out .6s;
+}
+.flex2 .srilaka:hover{
+    transform: scale(1.06);
+}
+.flex2 .north{
+    background: url("../images/northam.png");
+    padding-top: 145px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    height: 300px;
+    transition: all ease-in-out .6s;
+}
+.flex2 .north:hover{
+    transform: scale(1.06);
+}
+
+.flex2 .kasmir{
+    background: url("../images/kash.png");
+    padding-top: 145px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    height: 300px;
+    transition: all ease-in-out .6s;
+}
+.flex2 .kasmir:hover{
+    transform: scale(1.06);
+}
+
+ .gridd .flex3{
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    display: grid;
+    gap: 15px;
+    margin-top: 15px;
+    color: var(--text-color);
+    grid-template-columns:400px auto;
+}
+
+.flex3 .bangla{
+    background: url("../images/bangladesh.png");
+    padding-top: 145px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    height: 300px;
+    transition: all ease-in-out .6s;
+}
+.flex3 .bangla:hover{
+    transform: scale(1.06);
+}
+
+.flex3 .bandar{
+    background: url("../images/bandorban.png");
+    padding-top: 145px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    height: 300px;
+    transition: all ease-in-out .6s;
+}
+.flex3 .bandar:hover{
+    transform: scale(1.06);
+}
+
+
+
+/* Choose us section */
+
+.cards{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+    justify-content: center;
+}
+.card h1{
+    font-size: 24px;
+    font-weight: 800;
+    padding: 20px 0;
+}
+.card p{
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--p-color);
+
+}
+
+.card{
+    width: 48%;
+    height: 274px;
+    border-radius: 16px;
+    text-align: left;
+    padding: 40px;
+
+}
+
+
+/* newsletter */
+.newsletter{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+   
+}
+.newsletter .texts{
+    width: 43%;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    padding: 30px;
+}
+.newsletter .texts .form{
+    margin-top: 40px;
+    display: grid;
+    gap: 10px;
+}
+.newsletter .texts .form input{
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(19, 19, 24, 0.05);
+}
+.newsletter .img{
+    width: 55%;
+    position: relative;
+    top: 0;
+    right: 0;
+
+}
+.newsletter .image{
+    width: 100%;
+    
+}
+
+
+
+
+/* footer */
+.foot-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+footer{
+    text-align: center;
+    height: 340px;
+    background: rgba(19, 19, 24, 0.05);
+}
+
+
+
+
+
+/* responsive*/
+@media screen and (max-width:992px) {
+   
+    .header-section p{
+        font-size: 26px;
+        font-weight: 700;
+    }
+    .context{
+        width: 100%;
+    }
+    .popular{
+        flex-direction: column;
+        row-gap: 20px;
+
+    }
+    .popular .img-mout{
+        width: 100%;
+    }
+    .gridd .flex1,.gridd .flex2,.gridd .flex3{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+   .flex1 .maldiv,.flex1 .indo,.flex2 .srilaka,.flex2 .north,.flex2 .kasmir,.flex3 .bangla,.flex3 .bandar{
+        height: 176px;
+        padding: 80px;
+        font-size: 20px;
+    }
+}
+
+
+
+@media screen and (max-width:600px) {
+    .header-section { 
+        flex-direction : column;
+        margin-left: 50px;
+    }
+    .item-container{
+        flex-direction: column;
+        margin-left: 50px;
+        /*gap:20px;*/
+    }
+    .banner h1{
+        padding-top:20% ;
+        font-size: 1.8rem;
+        color: var(--text-color);
+        font-weight: 600;
+    }
+    .banner p{
+        color:rgba(242, 236, 236, 0.826);
+        font-size: 10px;
+        padding-top: 14px;
+    }
+    .banner .search{
+        display:flex;
+        flex-direction: column;
+        width: 200px;
+        margin: 0 auto;
+        row-gap: 15px;
+        margin-top: 20px;
+        padding: 8px;
+    }
+    .search>div{
+        background-color: var(--text-color);
+        color: var(--p-color);
+        display: flex;
+        align-items: center;
+        width:150px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .popular{
+        flex-direction: column;
+        row-gap: 20px;
+
+    }
+    .popular .img-mout{
+        width: 100%;
+    }
+    .context{
+        width: 100%;
+    }
+    .context h1{
+        font-size:33px;
+    }
+    .location h1{
+        font-size: 22px;
+    }
+    .location p{
+        font-size: 12px;
+    }
+
+     .gridd .flex1,.gridd .flex2,.gridd .flex3{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+   .flex1 .maldiv,.flex1 .indo,.flex2 .srilaka,.flex2 .north,.flex2 .kasmir,.flex3 .bangla,.flex3 .bandar{
+        height: 176px;
+        padding: 80px;
+        font-size: 20px;
+    }
+    
+
+    .cards{
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+    }
+
+   
+
+    .newsletter{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .newsletter .texts, .newsletter .img{
+        width: 100%;
+    }
+   
+
+}
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
